@@ -25,7 +25,7 @@ def sleeper(name):
     sleeplist = list()
     print(name, 'sees shared x being', shared_x)  # -
     for i in range(3):
-        subsleeper = Thread(target=sleeping, args=(name+' '+str(i),))
+        subsleeper = Thread(target=sleeping, args=(name+' '+str(i + 1),))
         sleeplist.append(subsleeper)
 
     for s in sleeplist:
